@@ -13,6 +13,7 @@ function computerPlay() {
   let roundsPlayed = 0;
   let humanScore = 0;
   let computerScore = 0;
+ 
 
 function resetScores() {
   humanScore = 0;
@@ -42,7 +43,8 @@ function resetScores() {
       computerScore++
       roundResult.textContent = defeatMsg;
     }
-
+    humanScoreDisp.textContent = humanScore;
+    compScoreDisp.textContent = computerScore;
     checkGame();
   }
 
