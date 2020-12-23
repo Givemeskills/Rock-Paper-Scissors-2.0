@@ -2,25 +2,30 @@
 <html>
 <head>
   <title>Rock Paper Scissors</title>
+  <link rel = "stylesheet" href = "style.css">
   <meta charset="UTF-8"/>
 </head>
 <body>
-  <div id = buttons>
-    <button id = "rock">Rock</button>
-    <button id = "paper">Paper</button>
-    <button id = "scissors">Scissors</button>
-  </div>
-  <div id = game-info>
-   <p id = "roundResult">Choose your weapon!</p>
-     <div id = scores>
-       <div id = human-score-div>
-        <p id = "humanScoreDisp">You</p>
-      </div>
-      <div id = computer-score-div>
-       <p id = "compScoreDisp">Computer</p>
+  <div id = main-page>
+    <div id = buttons>
+      <img id = "rock" src = "rock.png">
+      <img id = "paper" src = "paper.png">
+      <img id = "scissors" src = "scissors.png">
+   </div>
+    <div id = "game-info">
+    <p id = "roundResult">Choose your weapon!</p>
+      <div id = "scores">
+         <div id = "human-score-div">
+           <p><b>Your Score</b></p>
+           <p id = "humanScoreDisp"></p>
+         </div>
+      <div id = "computer-score-div">
+        <p><b>Computer Score</b></p>
+        <p id = "compScoreDisp"></p>
       </div>
       <p id = "gameResult"></p>
     </div>
+  </div>
   <script src = "game.js"></script>
 </body>
 </html>
