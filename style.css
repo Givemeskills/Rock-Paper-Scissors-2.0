@@ -1,3 +1,11 @@
+body {
+    background-color: lightblue;
+}
+
+#roundResult {
+    text-align: center;
+}
+
 #main-page {
 height: 50vw;
 display: flex;
@@ -8,4 +16,8 @@ justify-content: center;
 #buttons {
     display: flex;
     justify-content: space-around;
+    
+}
+#rock, #paper, #scissors {
+    cursor: pointer;
 }
