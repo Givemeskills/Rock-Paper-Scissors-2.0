@@ -20,6 +20,7 @@ humanScore = 0;
 computerScore = 0;
 }
 
+
 // The game itself - this plays one round and takes input from a human player and the computerPlay() function given provided bythe game function
 function playRound(humanSelection, computerSelection) {
 
@@ -79,19 +80,19 @@ if (roundsPlayed === 5 && humanScore > computerScore) {
 
 // buttons that give corresponding input
 let rock = document.querySelector('#rock')
-rock.addEventListener('click', function() {
+rock.addEventListener('mouseover', function() {
 playRound("rock");
 })
 
 
 let paper = document.querySelector('#paper')
-paper.addEventListener('click', function() {
+paper.addEventListener('mouseover', function() {
 playRound("paper");
 })
 
 
 let scissors = document.querySelector('#scissors')
-scissors.addEventListener('click', function() {
+scissors.addEventListener('mouseover', function() {
 playRound("scissors");
 })
 

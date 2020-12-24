@@ -8,32 +8,31 @@
 </head>
 <body>
 
-  <div id = main-page>
+  <div id = "scores">
+    <div id = "human-score-div">
+      <p id = "score-title"><b>Your Score</b></p>
+      <p id = "humanScoreDisp">0</p>
+    </div>
 
-    <h1 id = "roundResult">Choose your weapon!</h1>
+    <div id = "computer-score-div">
+      <p id = "score-title"><b>Computer Score</b></p>
+      <p id = "compScoreDisp">0</p>
+    </div>
+  </div>
+
+  <h1 id = "roundResult">Choose your weapon!</h1>
+
+  <div id = "game-info">
+    <p id = "gameResult"></p>
+  </div>
+
+  <div id = main-page>
 
     <div id = buttons>
       <img id = "rock" src = "rock.png">
       <img id = "paper" src = "paper.png">
       <img id = "scissors" src = "scissors.png">
    </div>
-
-    <div id = "game-info">
-
-      <div id = "scores">
-        <div id = "human-score-div">
-          <p><b>Your Score</b></p>
-          <p id = "humanScoreDisp">0</p>
-        </div>
-
-        <div id = "computer-score-div">
-          <p><b>Computer Score</b></p>
-          <p id = "compScoreDisp">0</p>
-        </div>
-
-        <p id = "gameResult"></p>
-      </div>
-    </div>
 
   </div>
   <script src = "game.js"></script>
