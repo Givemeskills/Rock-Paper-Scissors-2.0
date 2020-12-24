@@ -54,21 +54,21 @@ function checkGame() {
 
 if (roundsPlayed === 5 && humanScore > computerScore) {
     
-  gameResult.textContent = "Congratulations, you win the game";
+  roundResult.textContent = "Congratulations, you win the game! Mouseover a weapon to play again";
   roundsPlayed = 0;
   resetScores();
 
         
 } else if (roundsPlayed === 5 && humanScore === computerScore) { 
     
-  gameResult.textContent = "You're evenly matched - it's a draw!";
+  roundResult.textContent = "It's a draw - mousover a weapon to try again";
   roundsPlayed = 0;
   resetScores();
 
 
 } else if (roundsPlayed === 5 && humanScore < computerScore) {
 
-  gameResult.textContent = "You lost the game";
+  roundResult.textContent = "You lost the game - mouseover a weapon to try again!";
   roundsPlayed = 0
   resetScores();
         

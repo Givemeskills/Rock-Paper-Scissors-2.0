@@ -2,9 +2,23 @@
 
 
 body {
-    background-color:#06D6A0;
+    background-image:linear-gradient(-45deg, #06D6A0, #05B384, #048B67);
+    background-size: 400% 400%;
     color: #F8FFE5;
     font-family: Heebo;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
 }
 
 #humanScoreDisp {
@@ -16,7 +30,6 @@ body {
 }
 
 #main-page {
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,6 +39,7 @@ body {
     text-align: center;
     position: relative;
     bottom: 50px;
+    font-size: 50px;
 }
 
 #game-info {
@@ -34,13 +48,13 @@ body {
 
 #rock, #paper, #scissors {
     border-radius: 20%;
-    box-shadow:  0px 10px 15px 0px black;
-    background-color: #1B9AAA;
+    box-shadow:  0px 10px 1px 0px black;
+    background-color: #FFC43D ;
  
 }
 
 #rock:hover, #paper:hover, #scissors:hover {
-    transition: box-shadow 0s linear;
+    transition: box-shadow  linear;
     box-shadow: 0px 0px 0px 0px black;
     transform: scale(0.98);
 }
