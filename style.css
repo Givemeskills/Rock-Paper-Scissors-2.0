@@ -1,11 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap');
 
 
+@media screen and (max-width: 800px){
+    #scores {
+        font-size: 3vw !important;
+        margin-bottom: 0 !important;
+    }
+
+    #roundResult{
+        font-size: 1.5em!important;
+        align-self: center !important
+    }
+
+    #rock, #paper, #scissors {
+        width: 20vw !important;
+        
+    }
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
     background-image:linear-gradient(-45deg, #06D6A0, #05B384, #048B67);
     background-size: 400% 400%;
     color: #F8FFE5;
     font-family: Heebo;
+    font-size: 1.5em;
     animation: change 10s ease-in-out infinite;
 }
 
@@ -21,6 +47,16 @@ body {
     }
 }
 
+
+#scores {
+    display: flex;
+    justify-content: space-evenly;
+    height: 40vh;
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 3em;
+}
+
 #humanScoreDisp {
     color: green;
 }
@@ -32,23 +68,20 @@ body {
 #main-page {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     }
 
 #roundResult  {
+    position: absolute;
+    align-self: flex-end;
+    font-size: 1em;
     text-align: center;
-    position: relative;
-    bottom: 50px;
-    font-size: 50px;
 }
 
-#game-info {
-    text-align: center;
-}
 
 #rock, #paper, #scissors {
     border-radius: 20%;
-    box-shadow:  0px 10px 1px 0px black;
+    width: 15vw;
+    box-shadow:  0px 10px 10px 0px black;
     background-color: #FFC43D ;
  
 }
@@ -68,15 +101,3 @@ body {
 #rock, #paper, #scissors {
     cursor: pointer;
 }
-
-#scores {
-    display: flex;
-    justify-content: space-between;
-    height: 20vh;
-}
-
-#humanScoreDisp, #compScoreDisp {
-    text-align: center;
-    font-size: 40px;
-}
-

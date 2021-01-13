@@ -1,3 +1,15 @@
+ /* updates needed: 
+ 
+ - Change game to be highest score AFTER 5 rounds, rather
+ than 'best of 5'
+ - adjust round result text size and the way it fits into the page
+ - change colour of 'congratulations' text to green, 'defeat' to red etc
+ - add different 'modes' - 10 rounds, 20 etc.
+
+ */
+ 
+
+ 
  // create a function called computerPlay that returns a random choice of 'rock' 'paper' or 'scissors'
  function computerPlay() {
   let selection = Math.floor(Math.random() * 3);
@@ -21,7 +33,7 @@ computerScore = 0;
 }
 
 
-// The game itself - this plays one round and takes input from a human player and the computerPlay() function given provided bythe game function
+// The game itself - this plays one round and takes inpput from a human player and the computerPlay() function given provided bythe game function
 function playRound(humanSelection, computerSelection) {
 
 // increase round counter by 1 when a round is played
@@ -31,15 +43,15 @@ computerSelection = computerPlay(); // stores the result of computerPlay functio
 
 
 // define victory and defeat messages shown at the end of the round
-  const victoryMsg = "You win round " + roundsPlayed + " - " + humanSelection + " beats " + computerSelection + ".";
-  const defeatMsg = "You lose round " + roundsPlayed + " - " + computerSelection + " beats " + humanSelection + ".";
+  const victoryMsg = "You win round " + roundsPlayed + " - " + humanSelection + " beats " + computerSelection;
+  const defeatMsg = "You lose round " + roundsPlayed + " - " + computerSelection + " beats " + humanSelection;
 
 // define victory conditions for human player and return victory message if true, define draw conditions and return draw message, and define loss conditions and return loss message
   if (humanSelection === "rock" && computerSelection === "scissors"|| humanSelection === "paper" && computerSelection === "rock" || humanSelection === "scissors" && computerSelection === "paper") {
     humanScore++;
     roundResult.textContent = victoryMsg;
   } else if (humanSelection === computerSelection) { 
-    roundResult.textContent = "Round " + roundsPlayed + "'s " + "a draw.";
+    roundResult.textContent = "Round " + roundsPlayed + "'s " + "a draw";
   } else { 
     computerScore++
     roundResult.textContent = defeatMsg;
